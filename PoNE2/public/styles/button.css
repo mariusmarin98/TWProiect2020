@@ -1,0 +1,45 @@
+.commands {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+button {
+    background-color: royalblue;
+    border: none;
+    color: white;
+    padding: 2em;
+    margin: 2em;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    color: black;
+}
+
+
+/* #region BUTTON SCROLL TO TOP */
+
+#buttonScrollToTop {
+    background: deepskyblue;
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    border: none;
+    outline: none;
+    color: white;
+    cursor: pointer;
+    padding: 2rem;
+    text-align: center;
+}
+
+#buttonScrollToTop:hover {
+    background-color: black;
+}
+
+
+/* #endregion */

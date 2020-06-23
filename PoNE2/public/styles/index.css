@@ -1,0 +1,17 @@
+body {
+    background: skyblue;
+    font-family: verdana;
+    color: #fff;
+}
+
+label {
+    display: inline;
+}
+
+input {
+    width: 85vw;
+}
+
+.indexContent {
+    margin-left: 2vw;
+}

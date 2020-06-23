@@ -1,0 +1,36 @@
+[{
+        "id": "1",
+        "title": "Exercitiul 1",
+        "task": "Evalueaza expresia in forma prefixata",
+        "expr": "+ 5 / 18 6",
+        "rightAnswer": "8"
+    },
+    {
+        "id": "2",
+        "title": "Exercitiul 2",
+        "task": "Evalueaza expresia in forma prefixata",
+        "expr": "+ 9 * 5 7",
+        "rightAnswer": "44"
+    },
+    {
+        "id": "3",
+        "title": "Exercitiul 3",
+        "task": "Evalueaza expresia in forma postfixata",
+        "expr": "5 7 * 40 -",
+        "rightAnswer": "-5"
+    },
+    {
+        "id": "4",
+        "title": "Exercitiul 4",
+        "task": "Evalueaza expresia in forma postfixata",
+        "expr": "20 5 9 15 / * +",
+        "rightAnswer": "23"
+    },
+    {
+        "id": "5",
+        "title": "Exercitiul 5",
+        "task": "Evalueaza expresia in forma postfixata",
+        "expr": "78 23 3 * - 35 7 / 4 9 * - +",
+        "rightAnswer": "-22"
+    }
+]

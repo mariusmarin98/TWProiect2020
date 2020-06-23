@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PoNE - Wiki</title>
+    <link rel="stylesheet" type="text/css" href="./styles/page.css" />
+    <link rel="stylesheet" type="text/css" href="./styles/button.css" />
+    <link rel="stylesheet" type="text/css" href="./styles/navbar.css" />
+    <link rel="stylesheet" type="text/css" href="./styles/collapse.css" />
+</head>
+
+<body>
+    <button id="buttonScrollToTop">Sus</button>
+    <!-- #region NAV BAR -->
+    <div class="nav">
+        <label for="toggle">&#9776;</label>
+        <input type="checkbox" id="toggle" />
+        <div class="menu">
+            <a href="./index.html">PoNE</a>
+            <a href="./wiki.html">Wiki</a>
+            <a href="./exercises.html">Exercitii</a>
+        </div>
+    </div>
+    <!-- #endregion -->
+    <button type="button" class="collapsible">Ce este notatia poloneza</button>
+    <div class="content">
+        <p>
+            Notatia poloneza este un mod de scriere a expresiilor, în care ordinea operatorilor si a operanzilor este
+            schimbata fata de cea dintr-o expresie uzuala.
+        </p>
+        <p>În notatia uzuala (numita si infix) o expresie are forma: <i>operand <strong>operator</strong> operand</i>
+        </p>
+        <p> În notatia postfix poloneza expresia este scrisa sub forma: <i>operand operand <strong>operator</strong>
+            </i>
+        </p>
+        <p> În notatia prefix poloneza expresia este scrisa sub forma: <i><strong>operator</strong> operand operand </i>
+        </p>
+        </p>
+        <h5>Denumirea de notatie „poloneză“ se referă la naționalitatea logicianului Jan Lukasiewicz, care a inventat
+            notația poloneză în 1924.</h5>
+    </div>
+    <button type="button" class="collapsible">Scurt istoric</button>
+    <div class="content">
+        <h5>Denumirea de notatie „poloneză“ se referă la naționalitatea logicianului Jan Lukasiewicz, care a inventat
+            notația poloneză în 1924.</h5>
+        Un citat dintr-un articol de Jan Łukasiewicz, Observații despre Axioma lui Nicod și pe „Generalizarea
+        Deducției”, pagina 180, afirmă cum a fost inventată notația:</br>
+        </i>Mi-a venit ideea unei notări fără paranteze în 1924. Am folosit această notare pentru prima dată în
+        articolul meu Łukasiewicz, p. 610, nota de subsol.</i>
+        <p>
+            Referința citată de Łukasiewicz este aparent un raport litografiat în poloneză . Lucrarea de referință a lui
+            Łukasiewicz Observații despre Axioma lui Nicod și „Deducerea generalizantă” a fost revizuită de Henry A.
+            Pogorzelski în Journal of Symbolic Logic
+            în 1965. Heinrich Behmann, redactor în 1924 al articolului lui Moses Schönfinkel, aveam deja ideea
+            eliminării parantezelor în formulele logice.
+        </p>
+        <p>
+            Alonzo Church menționează această notare în cartea sa clasică despre logica matematică, demnă de remarcată
+            în sistemele notaționale, chiar contrastată cu expunerea și operația națională logică a lui Alfred Whitehead
+            și a lui Bertrand Russell în Principia
+            Mathematica.
+        </p>
+        <p>
+            În cartea lui 1951 a lui Łukasiewicz, <i>"Sylogisticul lui Aristotel din punctul de vedere al logicii
+                formale
+                moderne"</i>, el menționează că principiul notării sale era acela de a scrie functorii înaintea
+            argumentelor pentru a evita parantezele și că și-a angajat notația în lucrările sale logice din 1929. El
+            continuă apoi să citeze, ca exemplu,
+            o lucrare din 1930 pe care a scris-o împreună cu Alfred Tarski pe calculul simțial.
+        </p>
+    </div>
+    <button type="button" class="collapsible">Evaluarea expresiei Postfix</button>
+    <div class="content">
+        <p>
+            Notația poloneza postfix este utilizată în informatică pentru a calcula mai usor expresiile algebrice.
+            Expresiile scrise sub formă de postfix sunt evaluate mai rapid în comparație cu notarea infix, deoarece nu
+            sunt necesare parantezele în postfix.</p>
+        <ol>
+            <li> Creați o stivă pentru a stoca operanzi (sau valori) </li>
+            <li> Parcurgeți expresia dată de la stanga la dreapta și faceți următoarele pentru fiecare element scanat:
+            </li>
+            <ol>
+                <li>Dacă elementul este un operand, îl inserăm în stivă</li>
+                <li>Dacă elementul este un operator, scoatem 2 operanzi de pe stiva. Evaluam expresia formata din
+                    operanzii extrași si elementul curent. Rezultatul expresiei îl inserăm în stivă.
+                </li>
+            </ol>
+            <li>In final, în stivă vom avea un singur element : valoarea expresiei.</li>
+        </ol>
+    </div>
+    <button type="button" class="collapsible">Evaluarea expresiei Prefix</button>
+    <div class="content">
+        <p>
+            Notatia poloneza postfix este utilizată în informatică pentru a calcula mai usor expresiile algebrice.
+            Expresiile scrise sub formă de postfix sunt evaluate mai rapid în comparație cu notarea infix, deoarece nu
+            sunt necesare parantezele în postfix.</p>
+        <p>Pentru a evalua o expresie în formă prefix se aplica acelasi algoritm ca la evaluarea unei expresii postfix,
+            singura diferenta fiind parcurgerea expresiei de la dreapta la stanga.</p>
+    </div>
+    <script src="./scripts/scrollToTop.js"></script>
+    <script src="./scripts/wiki.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>PoNE - Exercises</title>
+
+  <link rel="stylesheet" type="text/css" href="./styles/page.css" />
+  <link rel="stylesheet" type="text/css" href="./styles/button.css" />
+  <link rel="stylesheet" type="text/css" href="./styles/navbar.css" />
+  <link rel="stylesheet" type="text/css" href="./styles/alertBox.css" />
+  <link rel="stylesheet" type="text/css" href="./styles/collapse.css" />
+  <link rel="stylesheet" type="text/css" href="./styles/exercises.css" />
+
+</head>
+
+<body>
+  <!-- #region NAV BAR -->
+  <div class="nav">
+    <label for="toggle">&#9776;</label>
+    <input type="checkbox" id="toggle" />
+    <div class="menu">
+      <a href="./index.html">PoNE</a>
+      <a href="./wiki.html">Wiki</a>
+      <a href="./exercises.html">Exercitii</a>
+    </div>
+  </div>
+  <!-- #endregion -->
+  <button id="buttonScrollToTop">Sus</button>
+  <div id="messageBoxArea"></div>
+  <button class="collapsible">Exercitiul 1</button>
+  <div class="content">
+    <label for="input1">
+      <h3>Evalueaza expresia in forma prefixata: + 5 / 18 6</h3>
+      <input id="input1" />
+      <button id="check1">Verifica raspunsul</button>
+      <button id="help1">Toggle solutie</button>
+      <ul id="solutie1"></ul> <!-- Aici afisez solutia-->
+    </label>
+  </div>
+
+  <button class="collapsible">Exercitiul 2</button>
+  <div class="content">
+    <label for="input2">
+      <h3>Evalueaza expresia in forma prefixata: + 9 * 5 7</h3>
+      <input id="input2" />
+      <button id="check2">Verifica raspunsul</button>
+      <button id="help2">Toggle solutie</button>
+      <ul id="solutie2"></ul>
+    </label>
+
+  </div>
+  <button class="collapsible">Exercitiul 3</button>
+  <div class="content">
+    <label for="input3">
+      <h3>Evalueaza expresia in forma postfixata: 5 7 * 40 -</h3>
+      <input id="input3" />
+      <button id="check3">Verifica raspunsul</button>
+      <button id="help3">Toggle solutie</button>
+      <ul id="solutie3"></ul>
+  </div>
+
+  <button class="collapsible">Exercitiul 4</button>
+  <div class="content">
+    <label for="input4">
+      <h3>Evalueaza expresia in forma postfixata: 20 5 9 15 / * +</h3>
+      <input id="input4" />
+      <button id="check4">Verifica raspunsul</button>
+      <button id="help4">Toggle solutie</button>
+      <ul id="solutie4"></ul>
+  </div>
+
+  <button class="collapsible">Exercitiul 5</button>
+  <div class="content">
+    <label for="input5">
+      <h3>Evalueaza expresia in forma postfixata: 78 23 3 * - 35 7 / 4 9 * - +</h3>
+      <input id="input5" />
+      <button id="check5">Verifica raspunsul</button>
+      <button id="help5">Toggle solutie</button>
+      <ul id="solutie5"></ul>
+  </div>
+</body>
+<script src="./scripts/scrollToTop.js"></script>
+<script src="./scripts/wiki.js"></script>
+<script src="./scripts/exercises.js"></script>
+
+</html>

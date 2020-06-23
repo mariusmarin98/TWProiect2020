@@ -1,0 +1,32 @@
+.alert {
+    padding: 20px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.alert.error {
+    background-color: #ff4433;
+}
+
+.alert.success {
+    background-color: #009933;
+}
+
+.alert.info {
+    background-color: lightskyblue;
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.7s;
+}
+
+.closebtn:hover {
+    color: #000000;
+}

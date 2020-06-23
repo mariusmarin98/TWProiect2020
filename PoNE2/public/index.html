@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PoNE - Home</title>
+  <!-- #region INCLUDES -->
+
+  <link rel="stylesheet" type="text/css" href="./styles/treeView.css" />
+  <link rel="stylesheet" type="text/css" href="./styles/alertBox.css" />
+  <link rel="stylesheet" type="text/css" href="./styles/button.css" />
+  <link rel="stylesheet" type="text/css" href="./styles/navbar.css" />
+  <link rel="stylesheet" type="text/css" href="./styles/index.css" />
+  <script src="./scripts/polish.js"></script>
+  <script src="./scripts/treeView.js"></script>
+  <!-- #endregion -->
+
+</head>
+
+<body>
+  <!-- #region NAV BAR -->
+  <div class="nav">
+    <label for="toggle">&#9776;</label>
+    <input type="checkbox" id="toggle" />
+    <div class="menu">
+      <a href="./index.html">PoNE</a>
+      <a href="./wiki.html">Wiki</a>
+      <a href="./exercises.html">Exercitii</a>
+    </div>
+  </div>
+  <!-- #endregion -->
+  <!-- ALERTS HERE -->
+  <div class="indexContent">
+    <div id="messageBoxArea"></div>
+    <!-- #region INPUT & OUTPUT HERE -->
+    <label class="iolabel">
+      <h2>Scrie expresia mai jos</h2>
+      <input id="inputExpr" type="text" />
+    </label>
+    <label class="iolabel">
+      <h2>Rezultatul operatiei efectuate</h2>
+      <input id="outputExpr" type="text" />
+    </label>
+    <!-- #endregion -->
+    <!-- #region BUTTONS -->
+    <div class="commands">
+      <!-- polish.js -->
+      <button onclick="showPolishPost()">
+        Forma poloneza postfixata
+      </button>
+      <button onclick="showPolishPre()">
+        Forma poloneza prefixata
+      </button>
+
+      <button onclick="showExprResult()">
+        Calculeaza rezultatul expresiei infix
+      </button>
+      <button onclick="viewEvaluatePrefixExpr()">
+        Calculeaza rezultatul expresiei prefix
+      </button>
+      <button onclick="viewEvaluatePostfixExpr()">
+        Calculeaza rezultatul expresiei postfix
+      </button>
+      <button id="btnShowTreeView" onclick="debugTreeView()">
+        Vizualizeaza arborele expresiei
+      </button>
+      <ul id="myUL"></ul> <!-- Arborele complet-->
+      <ul id="detailedUL"></ul> <!-- Arborii "pas cu pas"-->
+    </div>
+    <!-- #endregion -->
+  </div>
+</body>
+
+</html>
