@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Documentație</title>
+    <link rel="stylesheet" href="css/scholarly.min.css">
+    <script src="js/scholarly.min.js"></script>
+  </head>
+  <body prefix="schema: http://schema.org">
+    <header>
+      <div class="banner">
+        <img src="scholarly-html.svg" width="227" height="50" alt="Scholarly HTML logo">
+        <div class="status">Community Draft</div>
+      </div>
+      <h1>Documentație HTML</h1>
+    </header>
+
+    <div role="contentinfo">
+      <dl>
+        <dt>Realizat de:</dt>
+        <dd>
+          Aursulesei Stefan  
+        </dd>
+        <dd>Marius Marin</dd>
+        
+      </dl>
+    </div>
+    <section typeof="sa:Abstract" id="abstract" role="doc-abstract">
+      <h2>Documentație</h2>
+      <p>
+        
+        Notația poloneză este un mod de scriere a expresiilor, în care ordinea operatorilor si a operanzilor este schimbata fata de cea dintr-o expresie uzuala.
+        În notatia uzuală (numită și infix) o expresie are forma: 
+                     operand operator operand
+          În notatia postfix poloneză, expresia este scrisă sub forma: 
+            operand operand operator
+           În notatia prefix poloneză, expresia este scrisa sub forma:
+               operator operand operand
+          De exemplu:
+        a + b devine în notatie poloneză a b +
+        (a - b) * c devine a b - c *
+        a - b * (c + d) devine a b c d + * -
+      </p>
+    </section>
+    <section id="introduction" role="doc-introduction">
+      <!-- review? -->
+      <h2>Introducere</h2>
+      <p>
+        Denumirea de notație „poloneză“ se referă la naționalitatea logicianului Jan Lukasiewicz, care a inventat notația poloneză în 1924.
+
+
+        Când vrem să scriem un program care să poată interpreta o expresie infix - de exemplu (A + B) / (C-D) - poate părea greu, mai ales atunci când trebuie să interpretăm dacă expresia are valoarea bine determinată. 
+        Este mai  ușor dacă problema este descompusă în două etape:
+         - convertirea la notație postfix și 
+         - evaluarea expresiei în notație postfix.
+        Această idée a fost descrisă de Donald Knuth în 1962, iar algoritmul utilizează o stivă. A fost descris de Edsgar W. Dijkstra în 1961.         
+      </p>
+      <p>
+        Trebuie să cunoaștem regulile de prioritate ale operatorilor. Operațiile + și - au aceeași prioritate. Înmulțirea și împărțirea au, de asemenea, precedență egală, dar ambele au precedență mai mare decât + și -.
+        Plasăm un „simbol de încheiere” după expresia infix pentru a servi drept marker că am ajuns la sfârșitul expresiei. De asemenea, împingem acest simbol pe stivă.
+Expresia este transformată în notație postfixată, conform următoarelor reguli:
+
+1. Variabile (în acest caz litere) sunt copiate la ieșire
+2. Parantezele din stânga sunt întotdeauna împinse pe stivă
+3. Când se întâlnește o paranteză dreaptă, simbolul din partea de sus a stivei este scos din stivă și copiat la ieșire. Operația se repetă până când simbolul din partea de sus a stivei este o paranteză stângă. Când se întâmplă acest lucru, ambele paranteze sunt eliminate.
+4. În caz contrar, dacă simbolul scanat are o prioritate mai mare decât simbolul din topul stivei, simbolul scanat este împins pe stivă și pointerul de scanare avansează.
+5. Dacă precedența simbolului scanat este mai mică sau egală cu precedența simbolului din topul stivei, un element al stivei este afișat la ieșire; Pointerul de scanare nu avansează. În schimb, simbolul care va fi scanat va fi comparat cu noul element din topul stivei.
+6. Când simbolul de încheiere este atins pe scanarea de intrare, stiva este afișată la ieșire până când simbolul de încheiere este de asemenea atins pe stivă. Algoritmul se încheie.
+7. Dacă partea de sus a stivei este o paranteză stângă și simbolul de terminare este scanat, sau o paranteză dreaptă este scanată atunci când simbolul de încheiere este în topul stivei, parantezele expresiei inițiale au fost dezechilibrate și apare o eroare.
+
+    
+    </section>
+    <section id="structure">
+      <!-- review? -->
+      <h2>Evaluarea unei expresii în notatie poloneză</h2>
+      <p>
+        Pentru evaluarea unei expresii în notatie poloneza postfixată se poate folosi o stivă de valori reale. Expresia este parcursă de la stânga la dreapta. Ori de câte ori întâlnim în expresie un operand, valoarea lui este introdusa în stiva. Daca întâlnim un operator atunci se extrag doua valori din vârful stivei, care sunt, de fapt, cei doi operanzi, aplicam operatorul asupra valorilor extrase si rezultatul îl depunem în stiva. În momentul în care s-a terminat parcurgerea expresiei, rezultatul final al expresiei este în vârful stivei (si stiva contine doar aceasta valoare).
+        Exemplu:
+              Expresia de evaluat :   
+        78  23  3  *  -  35  7  /  4  9  *  -  +
+        
+           78       23         3       69       9     35      7         5          4          9        36   -31  -22
+                      78        23      78              9      35         9          5         4          5      9
+                                  78                                  9                     9         5          9
+                                                                                                          9
+        
+        
+                Pentru evaluarea unei expresii în notatie prefixată se folosește, asemănător ca la forma postfxată, o stivă de valori reale. Diferența este că expresia se scanează de la dreapta la stânga. Ori de câte ori întâlnim în expresie un operand, valoarea lui este introdusa în stiva. Daca întâlnim un operator atunci se extrag două valori din vârful stivei, care sunt, de fapt, cei doi operanzi, aplicăm operatorul asupra valorilor extrase si rezultatul îl depunem în stiva. În momentul în care s-a terminat parcurgerea expresiei, rezultatul final al expresiei este în vârful stivei (si stiva contine doar aceasta valoare).
+        
+        Ex: 
+            - 6 / 60 20
+        
+        60      3      6     3
+        20              3
+      </p>
+    </section>
+        </body>
+</html>
